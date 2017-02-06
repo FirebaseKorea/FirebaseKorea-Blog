@@ -1,0 +1,35 @@
+title: Firebase Korea Blog
+email: mydamyda1032[at]]gmail.com
+description: Firebase Korea Blog
+baseurl: ""
+
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+# Social Network
+github: https://github.com/FirebaseKorea
+facebook: https://www.facebook.com/groups/671723382988386/
+
+# disqus
+disqus: # insert disqus or comment system
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+defaults:
+- scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "default"
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: "post"

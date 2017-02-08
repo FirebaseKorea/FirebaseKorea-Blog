@@ -14,7 +14,10 @@ facebook: https://www.facebook.com/groups/671723382988386/
 disqus: # insert disqus or comment system
 
 # Build settings
-markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 theme: minima
 gems:
   - jekyll-feed

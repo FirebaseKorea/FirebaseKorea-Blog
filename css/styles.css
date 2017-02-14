@@ -313,11 +313,11 @@ a img{
 
 .android-link {
   text-decoration: none;
-  color: #8bc34a !important;
+  color: #F57C00 !important;
 }
 
   .android-link:hover {
-    color: #7cb342 !important;
+    color: #F57C00 !important;
   }
 
   .android-link .material-icons {

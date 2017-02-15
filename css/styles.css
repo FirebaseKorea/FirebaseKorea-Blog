@@ -156,11 +156,15 @@ a img{
 
 .android-be-together-section {
   position: relative;
-  height: 800px;
   width: auto;
-  background-color: #f3f3f3;
-  background: url('../images/slide_top.png') center 30% no-repeat;
+  background-color: #FDC12E;
   background-size: cover;
+  padding: 160px 0;
+}
+
+.landing-img {
+  width: 100%;
+  max-width: 700px;
 }
 
 .logo-font {
@@ -172,7 +176,6 @@ a img{
 
 .android-slogan {
   font-size: 60px;
-  padding-top: 160px;
 }
 
 .android-sub-slogan {
@@ -182,7 +185,6 @@ a img{
 
 .android-create-character {
   font-size: 21px;
-  padding-top: 400px;
 }
 
   .android-create-character a {
@@ -487,7 +489,7 @@ a img{
   }
 
   .android-be-together-section {
-    height: 350px;
+    padding: 24px 0;
   }
 
   .android-slogan {
@@ -503,7 +505,6 @@ a img{
   }
 
   .android-create-character {
-    padding-top: 200px;
     font-size: 16px;
   }
 

@@ -36,18 +36,16 @@ Firebase 데이터베이스는 하나의 API로 데이터의 현재 값과 해�
 
 **iOS**  
 
-{% highlight swift %}
-```
+```js
 refHandle = postRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
   let postDict = snapshot.value as! [String : AnyObject]
   // …
 })
 ```
-{% endhighlight %}
 
 **Web**  
 
-```
+```js
 firebase.database().ref('posts/' + postId).on('value', function(snapshot) {
     var post = snapshot.val();
     // …
@@ -56,7 +54,7 @@ firebase.database().ref('posts/' + postId).on('value', function(snapshot) {
 
 **Android**  
 
-```
+```java
 mPostReference.addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {

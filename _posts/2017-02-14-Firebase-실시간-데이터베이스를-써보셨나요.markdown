@@ -1,0 +1,84 @@
+---
+layout: post
+title:  "Firebase 실시간 데이터베이스를 써보셨나요?"
+date:   2017-02-14 00:46:54 +0900
+categories: firebase firebase-database
+---
+
+![Frank van Puffelen](https://3.bp.blogspot.com/-5x5tvtsSz98/VxfJYoUYPWI/AAAAAAAABLg/_wqjW4FuMVEPoK0XA_2Ls7r9H6t51ukawCLcB/s1600/frank_puffelen.jpg)
+**Frank van Puffelen, _엔지니어_**
+
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/U5aeM5dvUpA" width="640" kwframeid="2"></iframe>  
+
+### 역사
+
+실시간 데이터베이스는 4년 전 Firebase용으로 츨시한 첫 번째 기능입니다. 그 당시에는 클라우드에서 호스트되는 JSON 데이터베이스가 다소 생소한 개념이어서 즉시 세간의 주목을 받았습니다. Firebase 데이터베이스가 다른 것들과 차별화되는 점은, 단 하나의 사용하기 쉬운 API로 서로 다른 클라이언트 사이에 즉각적으로 데이터를 동기화할 수 았는 기능이었습니다.  
+
+실시간 데이터베이스는 애플리케이션 개발의 복잡한 작업 중 하나를 일관된 프로그래밍 인터페이스 뒤에 숨겨줍니다. 실시간 협업 애플리케이션을 손쉽게 만들 수 있도록 해주었습니다.  
+
+### 실시간 데이터베이스란?
+
+실시간 데이터베이스는 사실상 실시간으로 관리하는 하나의 커다란 JSON 객체입니다. 즉, 실제로는 수많은 값들로 구성된 하나의 트리입니다.  
+
+[![](https://2.bp.blogspot.com/-BpOd0fVKpuo/V3_cRGrFODI/AAAAAAAAAIk/ll6L0gj2WY4Ki_97sMCufmndxqQa8xO-gCLcB/s320/json-tree.jpg)](https://2.bp.blogspot.com/-BpOd0fVKpuo/V3_cRGrFODI/AAAAAAAAAIk/ll6L0gj2WY4Ki_97sMCufmndxqQa8xO-gCLcB/s1600/json-tree.jpg)
+
+따라서 단순하고 유연한 데이터 모델링이 가능합니다. 이 데이터베이스에는 스키마가 없습니다. 즉, 고정된 구조를 최초에 결정해 고정 할 필요가 없습니다. 데이터 유효성 검사가 걱정된다면, 데이터베이스에 입력되는 각 데이터의 구조에 대한 유효성 검사를 할 수 있게 해주는, 서버 측 규칙 언어를 사용할 수 있습니다.  
+
+Firebase 데이터베이스의 독특한 특징은 실시간 동기화 기능입니다. 종래의 데이터베이스에서는 대부분 요청/응답 모델로 작업하게 되어 있습니다. 쿼리를 작성한 다음 데이터베이스에게 그 쿼리의 결과를 달라고 요청하는 식이죠. 결과가 다시 필요하거나 그 결과에 대한 업데이트 정보가 있는지 확인하고 싶을 경우에는 쿼리를 다시 실행해야 합니다.  
+
+그러나 Firebase 데이터베이스는 다릅니다. 변경 사항이 발생하면 데이터베이스가 그 사실을 알려줍니다. 여러분은 데이터베이스에게 '트리의 이 위치에서 뭔가 변경되면 알려주세요'라고 하면 됩니다. 그러므로 변경 사항을 간단히 모니터링하고 모든 사용자들이 그 변경된 내용을 동기화된 상태로 유지할 수 있습니다.  
+
+### 실시간 이벤트
+
+[![](https://2.bp.blogspot.com/-pFdbGJb1MmI/V3_d7d6s_bI/AAAAAAAAAIw/7U1JypLEDe0AagSkOhSNZHgWUIzufj_TwCLcB/s320/realtime-data.gif)](https://2.bp.blogspot.com/-pFdbGJb1MmI/V3_d7d6s_bI/AAAAAAAAAIw/7U1JypLEDe0AagSkOhSNZHgWUIzufj_TwCLcB/s1600/realtime-data.gif)
+
+Firebase 데이터베이스는 하나의 API로 데이터의 현재 값과 해당 데이터에 대한 업데이트를 모두 앱에 제공합니다.  
+
+**iOS**  
+
+{% highlight swift %}
+```
+refHandle = postRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+  let postDict = snapshot.value as! [String : AnyObject]
+  // …
+})
+```
+{% endhighlight %}
+
+**Web**  
+
+```
+firebase.database().ref('posts/' + postId).on('value', function(snapshot) {
+    var post = snapshot.val();
+    // …
+});
+```
+
+**Android**  
+
+```
+mPostReference.addValueEventListener(new ValueEventListener() {
+    @Override
+    public void onDataChange(DataSnapshot dataSnapshot) {
+        // Get Post object and use the values to update the UI
+        Post post = dataSnapshot.getValue(Post.class);
+        // …
+    }
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
+        // Getting Post failed, log a message
+        Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
+        // …
+    }
+});
+```
+
+이 후, 사용자 인터페이스에 데이터를 표시하고, 사용자가 그 데이터를 변경 할 수 있도록 할 수도 있습니다. 간단하죠.  
+
+### 오프라인 상태에서 일어나는 일
+
+네트워크 연결이 끊기는 순간 반응하지 않는 앱을 사용해 보셨나요? 대부분의 개발자들은 네트워크 상태에 상관없이 앱이 작동하도록 만들고 싶어 합니다. 그래서 Firebase 데이터베이스는 앱에 표시되는 모든 데이터의 내부 캐시를 유지합니다. 네트워크 연결이 일시적으로 끊어지더라도 앱은 캐시에서 데이터를 읽어올 수 있습니다. 연결이 끊긴 상태에서, Firebase 데이터 클라이언트는 로컬 쓰기 작업의 큐를 유지합니다. 앱은 계속 작동하고, 이를 위해 따로 추가 코드를 쓸 필요가 없습니다.  
+
+Firebase 플랫폼의 힘은 모든 기능들을 통합하는 데서 나옵니다. 저희는 더 많은 통합을 추가하고 있지만, 개발자가 이미 사용할 수 있도록 준비된 통합의 예가 몇 가지 있습니다. 사용자들이 앱에 로그인할 수 있도록 허용한 다음, 자신의 ID를 바탕으로 자신의 데이터에 접근하도록 보장하세요. 사용자의 파일을 Firebase 저장소에 저장한 다음, 실시간 데이터베이스를 사용해서 다른 모든 앱 사용자들에 대해 상태와 가용성을 동기화하세요. Firebase Analytics로 어떤 파일들이 가장 인기 있는지 추적하고 해당 파일에 대한 협업을 위해 다른 사용자들을 초대하세요.  
+
+Firebase를 사용해 쉽게 다양한 사용자 경험을 제공할 수 있습니다.

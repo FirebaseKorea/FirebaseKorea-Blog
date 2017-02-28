@@ -48,7 +48,7 @@
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 관련 포스트</div>
           <div class="android-card-container mdl-grid">
 
-            {% for post in site.posts %}
+            {% for post in site.categories['our_post'] limit:4 %}
 
               <div class="demo-card-full mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title">
@@ -69,8 +69,8 @@
                 </div>
               </div>
 
-
             {% endfor %}
+
           </div>
         </div>
         <!-- Posting Section End -->
@@ -81,16 +81,16 @@
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 오픈소스</div>
           <div class="android-card-container mdl-grid">
 
+            {% for post in site.categories['our_open_source'] limit:4 %}
 
-            <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('../images/more-from-1.png') center / cover;">
-              <div class="mdl-card__title mdl-card--expand"></div>
-              <div class="mdl-card__actions">
-                <span class="demo-card-image__filename">OPEN_SOURCE_NAME</span>
+              <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('../images/more-from-1.png') center / cover;">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__actions">
+                  <span class="demo-card-image__filename">OPEN_SOURCE_NAME</span>
+                </div>
               </div>
-            </div>
 
-
-
+            {% endfor %}
           </div>
         </div>
         <!-- Open Source Project Section End -->
@@ -101,7 +101,7 @@
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 공식 블로그 번역</div>
           <div class="android-card-container mdl-grid">
 
-            {% for post in site.posts %}
+            {% for post in site.categories['official_post'] limit:4 %}
 
             <div class="demo-card-full mdl-card mdl-shadow--2dp">
               <div class="mdl-card__title">
@@ -123,7 +123,6 @@
             </div>
 
             {% endfor %}
-
           </div>
         </div>
         <!-- Official Blog Section End -->
@@ -134,13 +133,16 @@
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 공식 오픈소스 한글화</div>
           <div class="android-card-container mdl-grid">
 
-            <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('../images/more-from-1.png') center / cover;">
-              <div class="mdl-card__title mdl-card--expand"></div>
-              <div class="mdl-card__actions">
-                <span class="demo-card-image__filename">OPEN_SOURCE_NAME</span>
-              </div>
-            </div>
+            {% for post in site.categories['official_open_source'] limit:4 %}
 
+              <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('../images/more-from-1.png') center / cover;">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__actions">
+                  <span class="demo-card-image__filename">OPEN_SOURCE_NAME</span>
+                </div>
+              </div>
+
+            {% endfor %}
           </div>
         </div>
         <!-- Official Open Source Section End -->

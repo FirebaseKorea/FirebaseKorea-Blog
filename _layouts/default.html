@@ -48,25 +48,10 @@
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 관련 포스트</div>
           <div class="android-card-container mdl-grid">
 
-            {% for post in site.posts %}
-
-              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-                <div class="mdl-card__media">
-                  <img src="../images/more-from-1.png">
-                </div>
-                <div class="mdl-card__title">
-                  <h4 class="mdl-card__title-text">{{ post.title }}</h4>
-                </div>
-                <div class="mdl-card__supporting-text">
-                  <span class="mdl-typography--font-light mdl-typography--subhead">Description</span>
-                </div>
-                <div class="mdl-card__actions">
-                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{ post.url }}">
-                    더보기
-                  </a>
-                </div>
-              </div>
+            {% for post in site.categories['our_post'] limit:4 %}
+              {{post.title}}
             {% endfor %}
+
           </div>
         </div>
         <!-- Posting Section End -->
@@ -76,7 +61,9 @@
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 오픈소스</div>
           <div class="android-card-container mdl-grid">
-            <p>준비중입니다</p>
+            {% for post in site.categories['our_open_source'] limit:4 %}
+              {{post.title}}
+            {% endfor %}
           </div>
         </div>
         <!-- Open Source Project Section End -->
@@ -86,7 +73,9 @@
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 공식 블로그 번역</div>
           <div class="android-card-container mdl-grid">
-            <p>준비중입니다</p>
+            {% for post in site.categories['officail_post'] limit:4 %}
+              {{post.title}}
+            {% endfor %}
           </div>
         </div>
         <!-- Official Blog Section End -->
@@ -96,7 +85,9 @@
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 공식 오픈소스 한글화</div>
           <div class="android-card-container mdl-grid">
-            <p>준비중입니다</p>
+            {% for post in site.categories['official_open_source'] limit:4 %}
+              {{post.title}}
+            {% endfor %}
           </div>
         </div>
         <!-- Official Open Source Section End -->
@@ -106,7 +97,9 @@
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 공식 문서 한글화</div>
           <div class="android-card-container mdl-grid">
-            <p>준비중입니다</p>
+            {% for post in site.categories['document'] %}
+              {{post.title}}
+            {% endfor %}
           </div>
         </div>
         <!-- Document Section End -->

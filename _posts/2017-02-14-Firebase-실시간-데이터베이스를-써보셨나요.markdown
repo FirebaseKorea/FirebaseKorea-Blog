@@ -3,6 +3,7 @@ layout: post
 title:  "Firebase 실시간 데이터베이스를 써보셨나요?"
 date:   2017-02-14 00:46:54 +0900
 categories: firebase firebase-database
+tags : [태그1, 태그2]
 ---
 
 ![Frank van Puffelen](https://3.bp.blogspot.com/-5x5tvtsSz98/VxfJYoUYPWI/AAAAAAAABLg/_wqjW4FuMVEPoK0XA_2Ls7r9H6t51ukawCLcB/s1600/frank_puffelen.jpg)

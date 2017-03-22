@@ -35,13 +35,13 @@ defaults:
     path: "our_post"
     type: "posts"
   values:
-    layout: "default"
+    layout: "our_post"
     categories: "our_post"
 - scope:
     path: "our_open_source"
     type: "posts"
   values:
-    layout: "default"
+    layout: "our_open_source"
     categories: "our_open_source"
 - scope:
     path: "official_post"
@@ -53,11 +53,11 @@ defaults:
     path: "official_open_source"
     type: "posts"
   values:
-    layout: "default"
+    layout: "official_open_source"
     categories: "official_open_source"
 - scope:
     path: "organizer"
     type: "posts"
   values:
-    layout: "default"
+    layout: "organizer"
     categories: "organizer"

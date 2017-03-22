@@ -32,7 +32,32 @@ defaults:
   values:
     layout: "default"
 - scope:
-    path: ""
+    path: "our_post"
     type: "posts"
   values:
-    layout: "post"
+    layout: "default"
+    categories: "our_post"
+- scope:
+    path: "our_open_source"
+    type: "posts"
+  values:
+    layout: "default"
+    categories: "our_open_source"
+- scope:
+    path: "official_post"
+    type: "posts"
+  values:
+    layout: "official_post"
+    categories: "official_post"
+- scope:
+    path: "official_open_source"
+    type: "posts"
+  values:
+    layout: "default"
+    categories: "official_open_source"
+- scope:
+    path: "organizer"
+    type: "posts"
+  values:
+    layout: "default"
+    categories: "organizer"

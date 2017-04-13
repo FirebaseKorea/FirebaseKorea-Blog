@@ -1,5 +1,8 @@
 ---
 title:  "Firebase 실시간 데이터베이스를 써보셨나요?"
+authorName: "HSW"
+authorThumbnail: "https://4.bp.blogspot.com/-EqP9baCyFdc/WOPlTuM17SI/AAAAAAAABB0/_ClLtzsJhf8crUpuh-Fp1vVOjRVzWUJDwCLcB/s1600/me.jpg"
+authorTitle: "CTO"
 date:   2017-02-14 00:46:54 +0900
 tags : [태그1, 태그2]
 ---

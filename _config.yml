@@ -25,6 +25,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+sass:
+  sass_dir: /css/_sass
+
 defaults:
 - scope:
     path: ""

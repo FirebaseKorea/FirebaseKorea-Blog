@@ -1,3 +1,6 @@
+$sm: 480px;
+$md: 900px;
+
 .cols-wrapper {
   max-width: 928px;
   margin: auto;
@@ -6,24 +9,49 @@
   margin-bottom: 60px;
   overflow: hidden;
   padding: 0 20px;
+  line-height: 1.4;
+  @media (max-width: $md) {
+    min-width: initial;
+  }
+  @media (max-width: $sm), (max-height: $sm) {
+    margin-top: 0;
+    padding: 1px 40px;
+  }
   .col-main-wrapper {
     float: left;
     width: 100%;
     .col-main {
       margin-right: 278px;
       max-width: 580px;
+      @media (max-width: $md) {
+        margin-right: 0;
+        min-width: initial;
+      }
       .section {
         .post-list {
           .post {
+            @media (max-width: $sm), (max-height: $sm) {
+              margin-top: -55px;
+            }
             .title {
               margin: 0;
               position: relative;
               top: 350px;
               border: none;
+              line-height: 32px;
+              @media (max-width: $sm), (max-height: $sm) {
+                line-height: 24px;
+              }
               a {
                 color: rgba(0,0,0,0.87) !important;
                 font-weight: 300;
                 font-size: 36px;
+                text-decoration: none;
+                @media (max-width: $sm), (max-height: $sm) {
+                  font-size: 20px;
+                  line-height: 24px;
+                  font-weight: 500;
+                }
               }
             }
             .post-header {
@@ -32,12 +60,16 @@
               position: relative;
               top: 350px;
               padding-bottom: 20px;
+              line-height: 1.6;
               .published {
                 margin-top: -2px;
                 .publishdate {
                   font-size: 15px;
                   font-weight: normal;
                   color: rgba(0,0,0,.54);
+                  @media (max-width: $sm), (max-height: $sm) {
+                    font-size: 16px;
+                  }
                 }
               }
             }
@@ -50,6 +82,11 @@
                 margin: 25px 0 36px 0;
                 line-height: 32px;
                 word-wrap: break-word;
+                @media (max-width: $sm), (max-height: $sm) {
+                  font-size: 16px;
+                  line-height: 28px;
+                  margin-bottom: 30px;
+                }
                 .profile {
                   margin-bottom: 50px;
                   position: relative;
@@ -80,9 +117,17 @@
             .post-footer {
               font-size: 12px;
               padding-bottom: 21px;
+              @media (max-width: $sm), (max-height: $sm) {
+                border-bottom: 1px solid #eee;
+                margin: -16px 0 0 0;
+                padding: 0 0 20px 0;
+              }
               .label-footer {
                 margin-bottom: 12px;
                 margin-top: 12px;
+                @media (max-width: $sm), (max-height: $sm) {
+                  // display: none;
+                }
                 .label-caption {
                   color: #444;
                   font-weight: 500;
@@ -100,6 +145,9 @@
     margin-left: -278px;
     position: relative;
     top: -30px;
+    @media (max-width: $md) {
+      display: none;
+    }
     .aside {
       .sidebar {
         margin: 0;

@@ -27,9 +27,6 @@ a img{
  * Custom Area
  */
 
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
@@ -446,20 +443,9 @@ a img{
       width: 100%;
     }
 
-  .android-card-container .mdl-card__title {
-    background: transparent;
-    height: auto;
-  }
-
   .android-card-container .mdl-card__title-text {
     color: black;
     height: auto;
-  }
-
-  .android-card-container .mdl-card__supporting-text {
-    height: auto;
-    color: black;
-    padding-bottom: 56px;
   }
 
   .android-card-container .mdl-card__actions {

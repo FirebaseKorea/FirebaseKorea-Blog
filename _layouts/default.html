@@ -18,10 +18,10 @@ layout: common
 <!-- Posting Section Start -->
 <a name="our_post"></a>
 <div class="android-more-section">
-  <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 관련 포스트</div>
+  <div class="android-section-title mdl-typography--display-1-color-contrast">포스트 목록</div>
   <div class="android-card-container mdl-grid">
 
-    {% for post in site.categories['our_post'] limit:4 %}
+    {% for post in site.posts limit:10 %}
 
     <div class="demo-card-full mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
@@ -47,96 +47,6 @@ layout: common
   </div>
 </div>
 <!-- Posting Section End -->
-
-<!-- Open Source Project Section Start -->
-<a name="our_open_source"></a>
-<div class="android-more-section">
-  <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 오픈소스</div>
-  <div class="android-card-container mdl-grid">
-
-    {% for post in site.categories['our_open_source'] limit:4 %}
-
-    <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('../images/more-from-1.png') center / cover;">
-      <div class="mdl-card__title mdl-card--expand"></div>
-      <div class="mdl-card__actions">
-        <span class="demo-card-image__filename">OPEN_SOURCE_NAME</span>
-      </div>
-    </div>
-
-    {% endfor %}
-  </div>
-</div>
-<!-- Open Source Project Section End -->
-
-<!-- Official Blog Section Start -->
-<a name="official_post"></a>
-<div class="android-more-section">
-  <div class="android-section-title mdl-typography--display-1-color-contrast">
-    <a href="/official_post" target="_self">
-      파이어베이스 공식 블로그 번역
-    </a>
-  </div>
-  <div class="android-card-container mdl-grid">
-
-    {% for post in site.categories['official_post'] limit:4 %}
-
-    <div class="demo-card-full mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title">
-        <h4 class="mdl-card__title-text">{{ post.title }}</h4>
-      </div>
-      <div class="mdl-card__supporting-text">
-        {% for tag in post.tags %}
-        <span class="mdl-chip">
-          <span class="mdl-chip__text">{{ tag }}</span>
-        </span>
-        {% endfor %}
-
-      </div>
-      <div class="mdl-card__actions">
-        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{ post.url }}">
-          더보기
-        </a>
-      </div>
-    </div>
-
-    {% endfor %}
-  </div>
-</div>
-<!-- Official Blog Section End -->
-
-<!-- Official Open Source Section Start -->
-<a name="official_open_source"></a>
-<div class="android-more-section">
-  <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 공식 오픈소스 한글화</div>
-  <div class="android-card-container mdl-grid">
-
-    {% for post in site.categories['official_open_source'] limit:4 %}
-
-    <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('../images/more-from-1.png') center / cover;">
-      <div class="mdl-card__title mdl-card--expand"></div>
-      <div class="mdl-card__actions">
-        <span class="demo-card-image__filename">OPEN_SOURCE_NAME</span>
-      </div>
-    </div>
-
-    {% endfor %}
-  </div>
-</div>
-<!-- Official Open Source Section End -->
-
-<!-- Document Section Start -->
-<a name="document"></a>
-<div class="android-more-section">
-  <div class="android-section-title mdl-typography--display-1-color-contrast">파이어베이스 공식 문서 한글화</div>
-  <div class="android-card-container mdl-grid">
-
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-      한글화 문서 페이지로 이동
-    </button>
-
-  </div>
-</div>
-<!-- Document Section End -->
 
 <!-- Contact Section Start -->
 <a name="organizer"></a>

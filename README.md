@@ -17,36 +17,39 @@
 ## Organizer
 
 **김남훈**
-이메일 : mydamyda1032@gmail.com
-블로그 : http://namhoon.kim/
-Github : https://github.com/mydamyda
-Facebook : https://www.facebook.com/FGMyk
-LinkedIn : https://www.linkedin.com/in/namhoon-kim-b912a913a/
+
+* 이메일 : mydamyda1032@gmail.com
+* 블로그 : http://namhoon.kim/
+* Github : https://github.com/mydamyda
+* Facebook : https://www.facebook.com/FGMyk
+* LinkedIn : https://www.linkedin.com/in/namhoon-kim-b912a913a/
 
 **조민재**
-이메일: alswo2722@uos.ac.kr
-블로그: http://minjaejo.github.io
-Github: https://github.com/minjaeJo
-Facebook: https://www.facebook.com/alswo2722
+
+* 이메일: alswo2722@uos.ac.kr
+* 블로그: http://minjaejo.github.io
+* Github: https://github.com/minjaeJo
+* Facebook: https://www.facebook.com/alswo2722
 
 **허성욱**
-email: wooklym@gmail.com
-facebook: https://www.facebook.com/hswook93
-github: https://github.com/wooklym
+
+* email: wooklym@gmail.com
+* facebook: https://www.facebook.com/hswook93
+* github: https://github.com/wooklym
 
 ## 커뮤니티 개발 환경
 **Language**
-HTML
-CSS
-Javascript
-Markdown
-[Ruby](https://www.ruby-lang.org/en/)  ver 2.4.1
+* HTML
+* CSS
+* Javascript
+* Markdown
+* [Ruby](https://www.ruby-lang.org/en/)  ver 2.4.1
 
 **Tools**
-[Jekyll](https://jekyllrb.com/) ver 3.4.3
+* [Jekyll](https://jekyllrb.com/) ver 3.4.3
 
 **BaaS**
-[Firebase Hosting](https://firebase.google.com/)
+* [Firebase Hosting](https://firebase.google.com/)
 
 ## Gems
 ```{ruby id:"j2ad9jtg"}

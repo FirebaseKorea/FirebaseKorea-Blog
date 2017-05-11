@@ -1,9 +1,10 @@
+name: Firebase Korea
 title: Firebase Korea Blog
 email: mydamyda1032[at]]gmail.com
-description: Firebase Korea Blog
+description: Firebase Blog for Korean User
 baseurl: ""
 
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://firebasekorea.io/"
 
 
 # Social Network

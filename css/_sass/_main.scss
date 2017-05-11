@@ -27,15 +27,38 @@ a img{
  * Custom Area
  */
 
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
+.demo-card-wide {
+  .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    position: relative;
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .mdl-card__title-text {
+      z-index: 1;
+    }
+  }
+  .mdl-card__menu {
+    color: #fff;
+  }
+  .mdl-card__supporting-text {
+    margin-bottom: 53px;
+    .summary {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+  .mdl-card--border {
+    position: absolute;
+    bottom: 0;
+  }
 }
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-
-
 
 .demo-card-full.mdl-card {
   width: 100%;
@@ -429,33 +452,6 @@ a img{
       color: #666666;
       text-decoration: none;
     }
-  }
-
-.android-card-container {
-}
-
-  .android-card-container .mdl-card__media {
-    overflow: hidden;
-    background: transparent;
-  }
-
-    .android-card-container .mdl-card__media img {
-      width: 100%;
-    }
-
-  .android-card-container .mdl-card__title-text {
-    color: black;
-    height: auto;
-  }
-
-  .android-card-container .mdl-card__actions {
-    position: absolute;
-    bottom: 0;
-  }
-
-  .android-card-container .mdl-card__actions a {
-    border-top: none;
-    font-size: 16px;
   }
 
 .android-footer {

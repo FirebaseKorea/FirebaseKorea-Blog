@@ -52,9 +52,7 @@ defaults:
     categories: "our_open_source"
 - scope:
     path: "official_post"
-    type: "pages"
-    paginate: 5
-    paginate_path: "page:num"
+    type: "posts"
   values:
     layout: "official_post"
     categories: "official_post"

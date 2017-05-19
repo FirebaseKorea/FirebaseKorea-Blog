@@ -66,10 +66,19 @@ end
 이 카테고리는 HTML과 Jekyll 내부의 Front-matter에 동일하게 적용된다.
 
 파이어베이스 관련 포스트 : **our_post**
+
 파이어베이스 오픈소스 : **our_open_source**
+
 파이어베이스 공식 블로그 번역 : **official_post**
+
 파이어베이스 공식 오픈소스 한글화 : **official_open_source**
+
 파이어베이스 공식 문서 한글화 : **document**
 
+## 배포
+```{bash id:"j2vbjpah"}
+sh deploy.sh
+```
 ## 패치노트
+2017.05.19 : 배포 스크립트 추가
 2017.05.04 : Readme 작성

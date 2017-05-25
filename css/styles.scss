@@ -17,5 +17,19 @@
  * limitations under the License.
  */
 
+$sm: 480px;
+$md: 900px;
+
+$primary-color-dark:   #F57C00;
+$primary-color:        #FF9800;
+$primary-color-light:  #FFE0B2;
+$primary-color-text:   #212121;
+$accent-color:         #FF5252;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
 @import "main";
+@import "github-markdown";
+@import "post";
 @import "official-post";

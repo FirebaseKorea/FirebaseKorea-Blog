@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: official_post
 title:  "Firebase Hosting 소개"
 date:   2017-04-20 00:00:00 +0900
 categories: official_post

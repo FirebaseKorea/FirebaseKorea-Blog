@@ -1,39 +1,12 @@
----
-layout: common
----
-
 <div class="cols-wrapper">
   <div class="col-main-wrapper">
     <div class="col-main">
       <section class="section">
         <div class="post-list">
-          {% for post in site.categories['official_post'] limit:4 %}
           <div class="post">
-            <h2 class="title" itemprop="name">
-              <a href=" {{ post.url }}" itemprop="url" title="{{ post.title }}">
-                {{ post.title }}
-              </a>
-            </h2>
-            <div class="post-header">
-              <div class="published">
-                <span class="publishdate" itemprop="datePublished">
-                  {{ post.date }}
-                </span>
-              </div>
-            </div>
             <div class="post-body">
-              <div class="post-content post-summary" style="display: block;"><figure class="profile"><div class="profile-picture">
-                <img alt="{{ post.authorName }}" src="{{ post.authorImage }}" style="margin: 0px 0px 0px -1%;"></div>
-                <figcaption>
-                  <strong><div>
-                    {{ post.authorName }}</div>
-                  </strong>
-                  <em>{{ post.authorTitle }}</em></figcaption></figure>
-
-                  <br>
-                  {{ post.content | strip_html | truncatewords:75}}
-                  <a href="{{ post.url }}" itemprop="url" title="{{ post.title }}" class="read-more">Read More</a>
-                </div>
+              <div class="post-content markdown-body" style="display: block;">
+                {{ content }}
               </div>
               <div class="post-footer">
                 <div class="cmt_iframe_holder" data-href="http://firebase.googleblog.com/2017/04/brand-new-course-from-udacity-and-google.html" data-viewtype="FILTERED_POSTMOD" id="undefined"></div>
@@ -55,12 +28,11 @@ layout: common
                 </div>
               </div>
             </div>
-            {% endfor %}
           </div>
         </section>
       </div>
     </div>
-    <div class="col-right">
+    <!-- <div class="col-right">
       <aside class="aside">
         <section class="sidebar">
           <div class="tag-list">
@@ -68,6 +40,7 @@ layout: common
           </div>
         </section>
       </aside>
-    </div>
+    </div> -->
     <div style="clear:both;"></div>
   </div>
+</div>

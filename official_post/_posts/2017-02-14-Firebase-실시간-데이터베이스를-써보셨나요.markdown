@@ -1,14 +1,11 @@
 ---
 title:  "Firebase 실시간 데이터베이스를 써보셨나요?"
-authorName: "HSW"
-authorThumbnail: "https://4.bp.blogspot.com/-EqP9baCyFdc/WOPlTuM17SI/AAAAAAAABB0/_ClLtzsJhf8crUpuh-Fp1vVOjRVzWUJDwCLcB/s1600/me.jpg"
-authorTitle: "CTO"
+authorName: "Frank van Puffelen"
+authorImage: "https://3.bp.blogspot.com/-5x5tvtsSz98/VxfJYoUYPWI/AAAAAAAABLg/_wqjW4FuMVEPoK0XA_2Ls7r9H6t51ukawCLcB/s1600/frank_puffelen.jpg"
+authorTitle: "엔지니어"
 date:   2017-02-14 00:46:54 +0900
 tags : [태그1, 태그2]
 ---
-
-![Frank van Puffelen](https://3.bp.blogspot.com/-5x5tvtsSz98/VxfJYoUYPWI/AAAAAAAABLg/_wqjW4FuMVEPoK0XA_2Ls7r9H6t51ukawCLcB/s1600/frank_puffelen.jpg)
-**Frank van Puffelen, _엔지니어_**
 
 <iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/U5aeM5dvUpA" width="640" kwframeid="2"></iframe>  
 
@@ -47,7 +44,7 @@ refHandle = postRef.observeEventType(FIRDataEventType.Value, withBlock: { (snaps
 
 **Web**  
 
-```js
+```javascript
 firebase.database().ref('posts/' + postId).on('value', function(snapshot) {
     var post = snapshot.val();
     // …

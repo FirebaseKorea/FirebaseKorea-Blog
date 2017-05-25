@@ -1,168 +1,37 @@
-$sm: 480px;
-$md: 900px;
-
-.cols-wrapper {
-  max-width: 928px;
-  margin: auto;
-  clear: both;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  overflow: hidden;
-  padding: 0 20px;
-  line-height: 1.4;
-  @media (max-width: $md) {
-    min-width: initial;
-  }
-  @media (max-width: $sm), (max-height: $sm) {
-    margin-top: 0;
-    padding: 1px 40px;
-  }
-  .col-main-wrapper {
-    float: left;
-    width: 100%;
-    .col-main {
-      margin-right: 278px;
-      max-width: 580px;
-      @media (max-width: $md) {
-        margin-right: 0;
-        min-width: initial;
-      }
-      .section {
-        .post-list {
-          .post {
-            @media (max-width: $sm), (max-height: $sm) {
-              margin-top: -55px;
-            }
-            .title {
-              margin: 0;
-              position: relative;
-              top: 350px;
-              border: none;
-              line-height: 32px;
-              @media (max-width: $sm), (max-height: $sm) {
-                line-height: 24px;
-              }
-              a {
-                color: rgba(0,0,0,0.87) !important;
-                font-weight: 300;
-                font-size: 36px;
-                text-decoration: none;
-                @media (max-width: $sm), (max-height: $sm) {
-                  font-size: 20px;
-                  line-height: 24px;
-                  font-weight: 500;
-                }
-              }
-            }
-            .post-header {
-              margin: 0;
-              padding: 0;
-              position: relative;
-              top: 350px;
-              padding-bottom: 20px;
-              line-height: 1.6;
-              .published {
-                margin-top: -2px;
-                .publishdate {
-                  font-size: 15px;
-                  font-weight: normal;
-                  color: rgba(0,0,0,.54);
-                  @media (max-width: $sm), (max-height: $sm) {
-                    font-size: 16px;
-                  }
-                }
-              }
-            }
-            .post-body {
-              margin-top: 105px;
-              .post-content {
-                color: #212121;
-                font-size: 18px;
-                color: rgba(0,0,0, 0.87);
-                margin: 25px 0 36px 0;
-                line-height: 32px;
-                word-wrap: break-word;
-                @media (max-width: $sm), (max-height: $sm) {
-                  font-size: 16px;
-                  line-height: 28px;
-                  margin-bottom: 30px;
-                }
-                .profile {
-                  margin-bottom: 50px;
-                  position: relative;
-                  bottom: 110px;
-                  .profile-picture {
-                    border-radius: 240px;
-                    height: 130px;
-                    width: 130px;
-                    margin: 0 auto 10px auto;
-                    display: block;
-                    position: relative;
-                    overflow: hidden;
-                    img {
-                      display: block;
-                      margin: 0px 0px 0px -1%;
-                      max-height: 100%;
-                      max-width: none;
-                    }
-                  }
-                  figcaption {
-                    text-align: center;
-                    color: rgba(0,0,0, 0.54);
-                    font-size: 15px;
-                  }
-                }
-              }
-            }
-            .post-footer {
-              font-size: 12px;
-              padding-bottom: 21px;
-              @media (max-width: $sm), (max-height: $sm) {
-                border-bottom: 1px solid #eee;
-                margin: -16px 0 0 0;
-                padding: 0 0 20px 0;
-              }
-              .label-footer {
-                margin-bottom: 12px;
-                margin-top: 12px;
-                @media (max-width: $sm), (max-height: $sm) {
-                  // display: none;
-                }
-                .label-caption {
-                  color: #444;
-                  font-weight: 500;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  .col-right {
-    float: right;
-    width: 248px;
-    margin-left: -278px;
+.official-post {
+  position: relative;
+  .cover {
     position: relative;
-    top: -30px;
-    @media (max-width: $md) {
-      display: none;
+    height: 300px;
+    background-image: url("/images/official_post_cover.jpg");
+    background-size: cover;
+    background-position: center;
+    @media (max-width: $md), (max-height: $md) {
+      height: 250px;
     }
-    .aside {
-      .sidebar {
-        margin: 0;
-        padding: 0;
-        .tag-list {
-          margin-bottom: 0;
-          padding: 15px 0;
-          min-height: 20px;
-          h2 {
-            font-size: 18px;
-            line-height: 24px;
-            display: inline-block;
-          }
-        }
-      }
+    @media (max-width: $sm), (max-height: $sm) {
+      height: 200px;
     }
+  }
+  .author-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: -100px auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+  .post-info {
+    position: relative;
+    margin: 150px auto 80px auto;
+    text-align: center;
+    p {
+      font-size: 24px;
+    }
+  }
+  .title {
+    text-align: center;
+    color: $primary-color;
   }
 }

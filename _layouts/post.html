@@ -1,15 +1,17 @@
 ---
-layout: post
+layout: common
 ---
-<div id="article">
-  <div class="article-title">{{ page.title }}</div>
-  <p class="meta">
-    <small>
-      &nbsp;<i class="fa fa-calendar-o"></i> {{ page.date | date_to_string}}
-    </small>
-  </p> <hr/>
-  <div class="post">
-    {{ content }}
+<section class="official-post">
+  <div class="cover">
   </div>
-</div>
-{% include pager.html %}
+  <div class="author-image" style="background-image: url('{{ page.authorImage }}')">
+  </div>
+  <div class="post-info">
+    <p class="author-name">{{ page.authorName }}</p>
+    <p class="date">{{ page.date | date_to_string }}</p>
+  </div>
+  <h2 class="title">{{ page.title }}</h2>
+
+  {% include post_content.html %}
+  {% include pager.html %}
+</section>

@@ -28,10 +28,11 @@
       <!--{% include drawer.html %}-->
 
       <div class="android-content mdl-layout__content">
+        <div class="page-content">
+          {{ content }}
 
-        {{ content }}
-
-        {% include footer.html %}
+          {% include footer.html %}
+        </div>
       </div>
     </div>
     {% include scripts.html %}

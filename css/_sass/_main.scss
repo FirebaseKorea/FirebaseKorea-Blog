@@ -90,6 +90,7 @@ a img{
 .demo-card-square.mdl-card {
   width: 320px;
   height: 320px;
+  margin: 8px auto;
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
@@ -233,14 +234,15 @@ a img{
   width: auto;
   background-color: #FDC12E;
   background-size: cover;
-  padding: 160px 0;
+  padding: 100px 0;
 }
 
 .landing-img {
   width: 100%;
   max-width: 256px;
+  margin: 30px 0;
 }
- 
+
 .logo-font {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 1;

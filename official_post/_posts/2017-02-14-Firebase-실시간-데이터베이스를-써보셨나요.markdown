@@ -35,7 +35,7 @@ Firebase 데이터베이스는 하나의 API로 데이터의 현재 값과 해�
 
 **iOS**  
 
-```js
+```javascript
 refHandle = postRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
   let postDict = snapshot.value as! [String : AnyObject]
   // …

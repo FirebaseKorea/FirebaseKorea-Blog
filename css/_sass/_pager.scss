@@ -1,0 +1,11 @@
+.pager {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    padding: 0 30px;
+    list-style: none;
+    a {
+        color: $primary-color-dark;
+    }
+}

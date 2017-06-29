@@ -14,7 +14,20 @@ facebook: https://www.facebook.com/groups/671723382988386/
 # disqus
 disqus: # insert disqus or comment system
 
-# Build settings
+# Conversion
+markdown:    redcarpet
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "autolink", "fenced_code_blocks", "strikethrough", "highlight"]
+
 kramdown:
   input: GFM
   hard_wrap: false
